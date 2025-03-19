@@ -8,3 +8,5 @@ export { getCommets } from "./commets.js";
 export { getAlbums } from "./albunes.js"; 
 // Exportamos la función 'getPhotos' desde el archivo 'photos.js'
 export { getPhotos } from "./photos.js"; 
+
+

@@ -1,7 +1,5 @@
 // Importamos las funciones necesarias desde los módulos correspondientes
-import { getUsuarios, getPost, getCommets, getAlbums } from "./modulos/index.js"; 
-// Importamos la función para obtener fotos desde su módulo específico
-import { getPhotos } from "./modulos/photos.js"; 
+import { getUsuarios, getPost, getCommets, getAlbums, getPhotos,obtenerPostsYFiltrar } from "./modulos/index.js"; 
 // Definimos la URL base de la API JSONPlaceholder
 const URL = "https://jsonplaceholder.typicode.com"; 
 // Definimos un ID de usuario específico que se utilizará en la función
@@ -14,6 +12,7 @@ const getusuarioId = async (usuarioId) => {
     let post = await getPost(URL, usuario[0]); 
     // Llamamos a la función getAlbums para obtener los álbumes del usuario
     let albums = await getAlbums(URL, usuarioId); 
+    let filtrar=await obtenerPostsYFiltrar(URL, usuario[0])
 }; 
 // Ejecutamos la función getusuarioId pasando como argumento el usuarioId definido previamente
 getusuarioId(usuarioId); 
